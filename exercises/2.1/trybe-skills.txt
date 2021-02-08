@@ -2,3 +2,5 @@
 - Bash
 - Git
 - Desenvolvimento web
+- HTML
+- CSS
