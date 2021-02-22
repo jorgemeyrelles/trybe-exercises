@@ -24,7 +24,6 @@
 
 .img_esq{
     display: inline-block;
-    position: relative;
     text-align: left;
     border: 1px solid #000;
     border-radius: 3px;
@@ -32,7 +31,6 @@
 
 .img_dir{
     display: inline-block;
-    position: relative;
     text-align: right;
     border: 1px solid #000;
     border-radius: 3px;
