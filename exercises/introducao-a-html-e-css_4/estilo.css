@@ -10,10 +10,14 @@
 }
 
 .secao{
-    border: 2px;
+    border: 2px solid #000;
     background-color: blueviolet;
 }
 
 .italico{
     font-style: italic;
+}
+.rodape{
+    border: 2px solid #000;
+    background-color: burlywood;
 }
