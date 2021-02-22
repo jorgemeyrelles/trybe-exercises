@@ -26,12 +26,14 @@
     display: inline-block;
     border: 1px solid #000;
     border-radius: 3px;
+    float: left;
 }
 
 .img_dir{
     display: inline-block;
     border: 1px solid #000;
     border-radius: 3px;
+    float: right;
 }
 p{
     display: inline;
