@@ -21,3 +21,15 @@
     border: 2px solid #000;
     background-color: burlywood;
 }
+
+.img_esq{
+    float: left;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+.img_dir{
+    float: right;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
