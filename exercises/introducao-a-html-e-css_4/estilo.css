@@ -24,14 +24,12 @@
 
 .img_esq{
     display: inline-block;
-    text-align: left;
     border: 1px solid #000;
     border-radius: 3px;
 }
 
 .img_dir{
     display: inline-block;
-    text-align: right;
     border: 1px solid #000;
     border-radius: 3px;
 }
@@ -41,8 +39,4 @@ p{
 
 td{
     text-align: left;
-}
-
-img{
-    display: inline-block;
 }
