@@ -38,3 +38,11 @@
 p{
     display: inline-block;
 }
+
+td{
+    text-align: left;
+}
+
+img{
+    display: inline-block;
+}
