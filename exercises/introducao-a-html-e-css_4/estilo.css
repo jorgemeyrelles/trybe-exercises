@@ -57,12 +57,15 @@ body{
 }
 p{
     display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 td{
     text-align: left;
 }
 
-iframe{
+.secao_video{
     text-align: center;
+    align-content: center;
 }
