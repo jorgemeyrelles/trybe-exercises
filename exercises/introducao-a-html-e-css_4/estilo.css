@@ -2,8 +2,6 @@ body{
     background-color: antiquewhite;
 }
 .header{
-    border: 2px solid #000;
-    background-color: aqua;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 25px;
@@ -11,8 +9,6 @@ body{
 }
 
 .nav1{
-    border: 2px solid #000;
-    background-color: blue;
     text-align: right;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
