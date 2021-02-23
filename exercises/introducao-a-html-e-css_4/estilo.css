@@ -24,14 +24,14 @@
 }
 
 .img_esq{
-    display: inline-block;
+    display: inline;
     border: 1px solid #000;
     border-radius: 3px;
     float: left;
 }
 
 .img_dir{
-    display: inline-block;
+    display: inline;
     border: 1px solid #000;
     border-radius: 3px;
     float: right;
