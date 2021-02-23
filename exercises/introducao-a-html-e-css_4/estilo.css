@@ -25,8 +25,6 @@ body{
 }
 
 .secao{
-    border: 2px solid #000;
-    background-color: blueviolet;
     height: 300px;
 }
 
@@ -36,6 +34,7 @@ body{
 .rodape{
     border: 2px solid #000;
     background-color: burlywood;
+    text-align: center;
 }
 
 .img_esq{
@@ -57,8 +56,8 @@ body{
 }
 p{
     display: inline;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 td{
