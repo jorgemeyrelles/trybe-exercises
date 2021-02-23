@@ -15,7 +15,8 @@ body{
     background-color: blue;
     text-align: right;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 10px;
+    font-size: 20px;
+
 }
 
 .link_nav{
@@ -23,6 +24,7 @@ body{
     margin-right: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
+    border: 2px solid #000;
 }
 
 .secao{
