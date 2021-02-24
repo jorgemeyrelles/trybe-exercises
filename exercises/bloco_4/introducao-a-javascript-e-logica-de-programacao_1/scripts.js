@@ -1,10 +1,17 @@
-let age = 36;
-let name = "Jorge";
-let birthday = 20;
-let birthyear = 85;
+let a = 20;
+let b = 3;
 
-console.log(age);
-console.log(name);
-console.log(birthday);
-console.log(birthyear);
-console.log("O "+name+" tem "+age+" anos e nasceu em"+birthday+" de "+birthyear);
+//adição
+console.log(a+b);
+
+//subtração
+console.log(a-b);
+
+//multiplicação
+console.log(a*b);
+
+//divisão
+console.log(a/b);
+
+//módulo
+console.log(a%b);
