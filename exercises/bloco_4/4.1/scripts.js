@@ -3,7 +3,6 @@ let name = "Jorge";
 let birthday = 20;
 let birthyear = 85;
 
-
 console.log(age);
 console.log(name);
 console.log(birthday);
