@@ -126,3 +126,4 @@ var lucro = valorVenda - valorCustoTotal;
 console.log("custo total = "+valorCustoTotal);
 console.log("imposto sobre o custo = "+impostoSobreOCusto);
 console.log(lucro);
+
