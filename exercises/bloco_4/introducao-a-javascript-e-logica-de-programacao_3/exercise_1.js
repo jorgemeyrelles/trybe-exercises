@@ -1,16 +1,17 @@
-let n = 0;
+let n = 10;
 let vetor = [];
 
 for (let i = 0 ; i < n ; i++) {
   if (n < 1) {
+  
     console.log("Entrada inválida!");
-  } else if (i<n) {
-    for (let k = 1 ; k < n ; k++) {
+  
+  } else if (i == 0) {
+    for (let k = 0 ; k < n ; k++) {
       vetor.push('*');
     }
-  } else if (i == n-1) {
-    for ( let j = 0 ; j < n ; j++) {
-      console.log(vetor);
-    }
   }
+  
+  console.log(vetor);
+
 }
