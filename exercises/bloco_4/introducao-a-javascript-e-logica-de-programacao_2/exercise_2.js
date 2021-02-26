@@ -126,13 +126,13 @@ console.log(numbers);*/
 //bonus 3 (auxilio do esboço de implementação do artigo)
 let aux3 = 0;
 // Vamos ter que percorrer todo o vetor, logo:
-for (let k = 1; k <= numbers.length; k++) {
+for (let k = 0; k < numbers.length; k++) {
     
-        if ((k - 1) < numbers.length) {
-            // swap (trocamos)
-          aux3 = numbers[k] * numbers[k - 1];
-          numbers[k -1] = aux3;
-        } else if(k = numbers.length) {
+        if (k < (numbers.length-1)) {
+          // swap (trocamos)
+          aux3 = numbers[k] * numbers[k + 1];
+          numbers[k] = aux3;
+        } else {
           aux3 = 0;
           aux3 = numbers[k] * 2;
           numbers[k] = aux3;
