@@ -80,8 +80,65 @@ for (let index = 1; index < 26; index++) {
 }
 console.log(newNumbers);*/
 
-let newNumbers = [];
+//exercicio 9
+/*let newNumbers = [];
 for (let index = 1; index < 26; index++) {
   newNumbers.push(index/2);
 }
-console.log(newNumbers);
+console.log(newNumbers);*/
+
+//bonus 1 (auxilio do esboço de implementação do artigo)
+/*let aux = 0;
+// Vamos ter que percorrer todo o vetor, logo:
+for (let k = 1; k < numbers.length; k++) {
+    // Dentro de cada iteração
+    // percorremos novamente o vetor
+    // em busca dos pares
+    for (let j = 0; j < (numbers.length - k); j++) {
+        // Comparamos
+        if (numbers[j] > numbers[j + 1]) {
+            // swap (trocamos)
+            aux = numbers[j];
+            numbers[j] = numbers[j + 1];
+            numbers[j + 1] = aux;
+        }}
+}
+console.log(numbers);*/
+
+//bonus 2 (auxilio do esboço de implementação do artigo)
+let aux2 = 0;
+// Vamos ter que percorrer todo o vetor, logo:
+/*for (let k = 1; k < numbers.length; k++) {
+    // Dentro de cada iteração
+    // percorremos novamente o vetor
+    // em busca dos pares
+    for (let j = 0; j < (numbers.length - k); j++) {
+        // Comparamos
+        if (numbers[j] < numbers[j + 1]) {
+            // swap (trocamos)
+            aux2 = numbers[j];
+            numbers[j] = numbers[j + 1];
+            numbers[j + 1] = aux2;
+        }}
+}
+console.log(numbers);*/
+
+//bonus 3 (auxilio do esboço de implementação do artigo)
+let aux3 = 0;
+// Vamos ter que percorrer todo o vetor, logo:
+for (let k = 1; k <= numbers.length; k++) {
+    
+        if ((k - 1) < numbers.length) {
+            // swap (trocamos)
+          aux3 = numbers[k] * numbers[k - 1];
+          numbers[k -1] = aux3;
+        } else if(k = numbers.length) {
+          aux3 = 0;
+          aux3 = numbers[k] * 2;
+          numbers[k] = aux3;
+        }
+}
+console.log(numbers);
+
+
+
