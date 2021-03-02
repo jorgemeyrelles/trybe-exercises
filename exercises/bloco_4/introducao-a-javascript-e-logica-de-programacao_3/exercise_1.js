@@ -40,20 +40,15 @@ for (let i = n ; i > n ; i--) {
   
     console.log("Entrada inválida!");
   
-  } else if(i == n) {
-    for(let k = 0 ; k <= n - 1 ; k++){
-      if(k != i){
-        vetor[k - 1] = ' ';
-      } else {
+  } else if(i < n) {
+    for(let k = 0 ; k <= n ; k++){
+      if(k == i){
         vetor[k] = '*';
+      } else {
+        vetor[k] = ' ';
       }
-    } 
-
-  }else if (i < n) {
-    vetor[i] = '*';
-    
-  }
-  
+    }  
   console.log(vetor);
 
+}
 }
