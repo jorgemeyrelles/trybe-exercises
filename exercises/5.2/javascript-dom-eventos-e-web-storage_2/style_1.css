@@ -27,6 +27,7 @@ div {
   width: 60%;
   margin-left: 0;
   margin-right: auto;
+  display: inline-block;
 }
 
 .main-content .left-content .small-image {
@@ -41,6 +42,7 @@ div {
   width: 60%;
   margin-left: auto;
   margin-right: 0;
+  display: inline-block;
 }
 
 .main-content .description {
