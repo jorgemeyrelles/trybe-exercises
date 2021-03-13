@@ -14,18 +14,21 @@ function createDaysOfTheWeek() {
 function createDaysOfMonth() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   const daysWeek = document.querySelector('#days');
-  // Escreva seu código abaixo.
-  console.log(dezDaysList);
+
   for (let i = 0; i < dezDaysList.length; i += 1) {
     const txt = dezDaysList[i];
     
     const tit = document.createElement('li');
-    if (txt === 24 | txt === 25 | txt === 31) {
+    if (txt === 24 | txt === 31) {
       tit.className = 'holiday';
       tit.innerHTML = txt;
       daysWeek.appendChild(tit);
-    } else if (txt === 4 | txt === 11 | txt === 18 | txt === 25) {
-      tit.className = 'day friday';
+    } else if (txt === 4 | txt === 11 | txt === 18) {
+      tit.className = 'day-friday';
+      tit.innerHTML = txt;
+      daysWeek.appendChild(tit);
+    } else if (txt === 25) {
+      tit.className = 'day-friday holiday';
       tit.innerHTML = txt;
       daysWeek.appendChild(tit);
     } else {
@@ -37,25 +40,125 @@ function createDaysOfMonth() {
 }
 function createHoliday(feriado) {
   const Holiday = document.querySelector('.buttons-container');
-  const createTitle = document.createElement('h3');
-  const createInput = document.createElement('input');
   const createButton = document.createElement('button');
-  const creatSection = document.createElement('section');
-  creatSection.className = 'tasks-container';
-  createTitle.innerHTML = 'FERIADOS';
-  // createTitle.className = 'tasks-container';
-  createButton.innerHTML = 'Adicionar';
-  createButton.className = '#btn-holiday';
-  createInput.innerHTML = feriado;
-  createInput.className = '#btn-holiday';
-  createInput.placeholder = 'Escreva o feriado';
-  Holiday.appendChild(creatSection);
-  const holiday = document.querySelector('section');
-  holiday.appendChild(createTitle);
-  holiday.appendChild(createInput);
-  holiday.appendChild(createButton);
+
+  createButton.innerHTML = feriado;
+  createButton.id = 'btn-holiday';
+  Holiday.appendChild(createButton);
+};
+
+function buttonHoliday () {
+  const buttonChanges = document.querySelector('#btn-holiday');
+  const classe = document.querySelectorAll('.holiday');
+  const backgroundColor = 'rgb(238,238,238)';
+  const backgroundwhite = 'white';
+  buttonChanges.addEventListener('click',backgroundChanges);
+  console.log(classe);
+
+  function backgroundChanges () {
+    for (let i = 0; i < classe.length; i += 1){
+      if (classe[i].style.backgroundColor === backgroundwhite) {
+        classe[i].style.backgroundColor = backgroundColor;
+        console.log(classe[i]);
+        console.log(backgroundColor);
+      } else {
+        classe[i].style.backgroundColor = backgroundwhite;
+      }
+    }
+  };
+}
+
+function createFridayButton (fridayName) {
+  const FridayButton = document.querySelector('.buttons-container');
+  const createButtonFriday = document.createElement('button');
+
+  createButtonFriday.innerHTML = fridayName;
+  createButtonFriday.id = 'btn-friday';
+  FridayButton.appendChild(createButtonFriday);
+}
+
+function FridayChangesButton (fridayList) {
+  const recoverFridayClass = document.querySelector('#btn-friday');
+  const fridayClass = document.getElementsByClassName('day-friday');
+  const fridayString = 'Sexta'
+  recoverFridayClass.addEventListener('click', fridayChanges);
+
+  function fridayChanges () {
+    for (let i = 0; i < fridayClass.length; i += 1){
+      if (fridayClass[i].innerHTML !== fridayString) {
+        fridayClass[i].innerHTML = fridayString;
+      } else {
+        fridayClass[i].innerHTML = fridayList[i];
+      }
+    }
+  };
+}
+
+function zoomInFunction () {
+  const daysClass = document.querySelector('#days');
+
+  daysClass.addEventListener('mouseover', function(mousePassingOn) {
+    mousePassingOn.target.style.fontSize = '35px';
+    mousePassingOn.target.style.fontWeight = '600';
+  });
+}
+
+function zoomOutFunction () {
+  const daysClass = document.querySelector('#days');
+
+  daysClass.addEventListener('mouseout', function(mousePassingOn) {
+    mousePassingOn.target.style.fontSize = '20px';
+    mousePassingOn.target.style.fontWeight = '200';
+  });
+}
+
+function myTask (task) {
+  const taskClass = document.querySelector('.my-tasks');
+  const creatSpan = document.createElement('span');
+  creatSpan.innerHTML = task;
+  taskClass.appendChild(creatSpan);
+}
+
+function addStyleOnTask (color) {
+  const taskElement = document.querySelector('.my-tasks');
+  const createDiv = document.createElement('div');
+  createDiv.className = 'task';
+  createDiv.style.backgroundColor = color;
+  taskElement.appendChild(createDiv);
+}
+
+function selectionTask () {
+  const colorTask = document.querySelector('.task');
+  colorTask.addEventListener('click', function() {
+    if (colorTask.className !== 'task selected') {
+      colorTask.className = 'task selected';
+    } else {
+      colorTask.className = 'task'
+    }
+    })
+}
+
+function highlightDay () {
+  const daysTask = document.getElementsByClassName('task selected');
+  const selectedDay = document.querySelector('.task');
+
+  selectedDay.addEventListener('click', function(clickedButton) {
+    if (daysTask.length === 0) {
+      clickedButton.target.className = 'task selected';
+    } else {
+      clickedButton.target.className = 'task';
+    }
+  })
 }
 
 createDaysOfTheWeek()
 createDaysOfMonth()
-createHoliday()
+createHoliday('Feriados')
+buttonHoliday();
+createFridayButton('Sexta-Feira');
+FridayChangesButton([4, 11, 18, 25]);
+zoomInFunction()
+zoomOutFunction()
+myTask('Projetos')
+addStyleOnTask('rgb(255,255,255)')
+selectionTask();
