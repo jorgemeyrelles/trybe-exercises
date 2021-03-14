@@ -138,6 +138,7 @@ for (let k = 0; k < numbers.length; k++) {
           numbers[k] = aux3;
         }
 }
+
 console.log(numbers);
 
 
