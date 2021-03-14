@@ -135,21 +135,29 @@ function selectionTask () {
     } else {
       colorTask.className = 'task'
     }
-    })
+  })
 }
 
 function highlightDay () {
-  const daysTask = document.getElementsByClassName('task selected');
-  const selectedDay = document.querySelector('.task');
+  const daysTask = document.querySelector('#days');
+  const selectedDay = document.getElementsByClassName('task selected');
+  const notSelectedDay = document.querySelector('.task');
+  const colorbackground = notSelectedDay.style.backgroundColor;
 
-  selectedDay.addEventListener('click', function(clickedButton) {
-    if (daysTask.length === 0) {
-      clickedButton.target.className = 'task selected';
-    } else {
-      clickedButton.target.className = 'task';
+  daysTask.addEventListener('click', function(selectedDayId) {
+    const colorTarget = selectedDayId.target.style.color;
+    // console.log(selectedDay[0]);
+    // console.log(colorTarget);
+    // console.log(colorbackground);
+    if (selectedDay.length > 0 && colorTarget !== colorbackground) {
+      // console.log('Muda o BG')
+      selectedDayId.target.style.color = selectedDay[0].style.backgroundColor;
+    } else if (colorTarget === colorbackground && selectedDay.length !== 0) {
+      // console.log('Volta ano normal')
+      selectedDayId.target.style.color = 'rgb(119,119,119)';
     }
   })
-}
+};
 
 createDaysOfTheWeek()
 createDaysOfMonth()
@@ -162,3 +170,4 @@ zoomOutFunction()
 myTask('Projetos')
 addStyleOnTask('rgb(255,255,255)')
 selectionTask();
+highlightDay();
