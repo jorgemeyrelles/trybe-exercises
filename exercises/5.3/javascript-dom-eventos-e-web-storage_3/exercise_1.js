@@ -159,6 +159,32 @@ function highlightDay () {
   })
 };
 
+function addingTaskInList () {
+  const inputTaks = document.querySelector('#task-input');
+  const buttonInputTask = document.querySelector('#btn-add');
+  const listTask = document.querySelector('.task-list');
+  
+  buttonInputTask.addEventListener('click',function() {
+    if (inputTaks.value.length > 0) {
+      const createTaskList = document.createElement('li');
+      createTaskList.innerText = inputTaks.value;
+      listTask.appendChild(createTaskList);
+      inputTaks.value = '';
+    } else {
+      alert('Não apresentou nenhuma tarefa nova.');
+    }
+  });
+  
+  buttonInputTask.addEventListener('keyup',function(event) {
+    if (event.keyCode == 'Enter' && inputTaks.value.length > 0) {
+      const createTaskList = document.createElement('li');
+      createTaskList.innerText = inputTaks.value;
+      listTask.appendChild(createTaskList);
+      inputTaks.value = '';
+    }
+  });
+}
+
 createDaysOfTheWeek()
 createDaysOfMonth()
 createHoliday('Feriados')
@@ -167,7 +193,8 @@ createFridayButton('Sexta-Feira');
 FridayChangesButton([4, 11, 18, 25]);
 zoomInFunction()
 zoomOutFunction()
-myTask('Projetos')
+myTask('Projetos');
 addStyleOnTask('rgb(255,255,255)')
 selectionTask();
 highlightDay();
+addingTaskInList();
