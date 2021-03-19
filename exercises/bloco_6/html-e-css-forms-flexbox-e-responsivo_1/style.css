@@ -1,0 +1,21 @@
+.bloco-1 {
+  /*display: flex;*/
+}
+
+.bloco-2 {
+  /*display: flex;*/
+}
+
+.bloco-3 {
+  /*display: flex;*/
+}
+
+.titulo {}
+
+input[type=text] {
+  width: 40%;
+}
+
+input[type=email] {
+  width: 40%;
+}
