@@ -9,7 +9,7 @@
 </head>
 <body>
   <h1 class="titulo">Formulário</h1>
-  <form action="" method="get">
+  <form action="" method="GET">
     <fieldset class="bloco-1">
       <label for="nome-texto" class="">Nome<input type="text" max="40" name="nome" id="nome-texto" required></label>
       <br>
@@ -27,12 +27,12 @@
       </label>
       </br>
       <label for="tipo" class="">Tipo de Moradia
-      <label for="casa" class=""><input type="radio" name="moradia" id="casa" value="casa">Casa</label>
-      <label for="apt" class=""><input type="radio" name="moradia" id="apt" value="apt">Apartamento</label>
+      <label for="casa" class="radio-opcao"><input type="radio" name="moradia" id="casa" value="casa">Casa</label>
+      <label for="apt" class="radio-opcao"><input type="radio" name="moradia" id="apt" value="apt">Apartamento</label>
       </label>
     </fieldset>
     <fieldset class="bloco-2">
-      Resumo do Currículo<br><textarea name="resumo" placeholder="Adicione o resumo do seu currículo" maxlength="1000" required id="espaco-texto" cols="30" rows="10"></textarea>
+      Resumo do Currículo<br><textarea name="resumo" placeholder="Adicione o resumo do seu currículo" maxlength="1000" required id="espaco-texto" cols="48" rows="10"></textarea>
       <br>
       <label for="cargo-texto">Cargo<input type="text" required max="40" name="cargo" id="cargo-texto"></label>
       <br>
@@ -45,7 +45,7 @@
     <br>
     <section class="btn">
       <button type="submit" id="finalizar">Enviar</button>
-      <button id="limpar">Limpar</button>
+      <button type='reset' id="limpar">Limpar</button>
     </section>
     <section class="bloco-3">
       <div class="finalizado"></div>

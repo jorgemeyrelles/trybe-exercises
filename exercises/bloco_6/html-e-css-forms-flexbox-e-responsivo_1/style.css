@@ -12,10 +12,22 @@
 
 .titulo {}
 
+label {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  width: 400px;
+}
+
+label.radio-opcao {
+  width: 100px;
+  justify-content: flex-end;
+}
+
 input[type=text] {
-  width: 40%;
+  width: 300px;
 }
 
 input[type=email] {
-  width: 40%;
+  width: 300px;
 }
