@@ -8,44 +8,70 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 class="titulo">Formulário</h1>
+  <header>
+    <h1 class="titulo">Formulário</h1>
+  </header>
   <form action="" method="GET">
     <fieldset class="bloco-1">
-      <label for="nome-texto" class="">Nome<input type="text" max="40" name="nome" id="nome-texto" required></label>
+      <div class="bloco-1-div">
+        <label for="nome" class="bloco-1-label">Nome</label><input type="text" max="40" name="nome" id="nome" required>
+      </div>
       <br>
-      <label for="e-mail" class="">E-mail<input type="email" max="50" name="email" placeholder="nome@algumacoisa.com" id="e-mail" required></label>
+      <div class="bloco-1-div">
+        <label for="e-mail" class="bloco-1-label">E-mail</label><input type="email" max="50" name="email" placeholder="nome@algumacoisa.com" id="e-mail" required>        
+      </div>
       <br>
-      <label for="cpf-numero" class="">CPF<input type="text" max='11' id='cpf-numero' required></label>
+      <div class="bloco-1-div">
+        <label for="cpf" class="bloco-1-label">CPF</label><input type="text" max='11' id='cpf' required>
+      </div>
       <br>
-      <label for="endereco" class="">Endereço<input type="text" max="200" id="endereco" required></label>
+      <div class="bloco-1-div">
+        <label for="endereco" class="bloco-1-label">Endereço</label><input type="text" max="200" id="endereco" required>
+      </div>
       <br>
-      <label for="cidade" class="">Cidade<input type="text" max="28" id="cidade" required></label>
+      <div class="bloco-1-div">
+        <label for="cidade" class="bloco-1-label">Cidade</label><input type="text" max="28" id="cidade" required>
+      </div>
       <br>
-      <label for="estado-texto" class="">Estado<select name='estado' id="estado-texto" required>
-        <option value="none">Sigla</option>
-      </select>
-      </label>
+      <div class="bloco-1-div">
+        <label for="estado" class="bloco-1-label">Estado</label>
+        <select name='estado' id="estado" required>
+        </select>
+      </div>
       </br>
-      <label for="tipo" class="">Tipo de Moradia
-      <label for="casa" class="radio-opcao"><input type="radio" name="moradia" id="casa" value="casa">Casa</label>
-      <label for="apt" class="radio-opcao"><input type="radio" name="moradia" id="apt" value="apt">Apartamento</label>
-      </label>
+      <div class="bloco-1-div">
+        <label for="moradia" class="bloco-1-label">Tipo de Moradia</label>
+        <label for="casa" class="radio-opcao"><input type="radio" name="moradia" id="casa" value="casa">Casa</label>
+        <label for="apt" class="radio-opcao"><input type="radio" name="moradia" id="apt" value="apt">Apartamento</label>
+      </div>
     </fieldset>
     <fieldset class="bloco-2">
-      Resumo do Currículo<br><textarea name="resumo" placeholder="Adicione o resumo do seu currículo" maxlength="1000" required id="espaco-texto" cols="48" rows="10"></textarea>
+      <div class="bloco-2-div">
+        <label for="resumo" class="bloco-2-label">Resumo do Currículo</label>
+        <br>
+        <textarea name="resumo" placeholder="Adicione o resumo do seu currículo" maxlength="1000" required id="resumo" cols="48" rows="10"></textarea>
+      </div>
       <br>
-      <label for="cargo-texto">Cargo<input type="text" required max="40" name="cargo" id="cargo-texto"></label>
+      <div class="bloco-2-div">
+        <label for="cargo-texto" class="bloco-2-label">Cargo</label><input type="text" required max="40" name="cargo-texto" id="cargo-texto">
+      </div>
       <br>
-      <label for="descricao-cargo">Descrição<input type="text" required max="500" name="descricao" id="descricao-cargo"></label>
+      <div class="bloco-2-div">
+        <label for="cargo" class="bloco-2-label">Descrição</label><input type="text" required max="500" name="cargo" id="cargo">
+      </div>
       <br>
-      <label for="data-inicio">Data de início<input type="date" required name="data_ini" id="data-inicio"></label>
+      <div class="bloco-2-div">
+        <label for="data-ini" class="bloco-2-label">Data de início</label><input type="date" required name="data_ini" id="data-inicio">
+      </div>
       <br>
-      <label for="descricao-cargo">Descrição<input type="text" required max="500" name="descricao" id="descricao-cargo"></label>
+      <div class="bloco-2-div">
+        <label for="descricao" class="bloco-2-label">Descrição</label><input type="text" required max="500" name="descricao" id="descricao-cargo">
+      </div>
     </fieldset>
     <br>
     <section class="btn">
-      <button type="submit" id="finalizar">Enviar</button>
-      <button type='reset' id="limpar">Limpar</button>
+      <button type="button" id="finalizar">Enviar</button>
+      <button type='button' id="limpar">Limpar</button>
     </section>
     <section class="bloco-3">
       <div class="finalizado"></div>
