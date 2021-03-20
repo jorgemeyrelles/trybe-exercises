@@ -5,7 +5,7 @@ function submitDefault() {
   });
 }
 function criarResumo () {
-  const pegarTodasDiv = document.querySelectorAll('div');
+  const pegarTodasDiv = document.querySelectorAll('input');
   const pegarSection = document.querySelector('section.bloco-3');
   const pegarButtonSubmit = document.querySelector('#finalizar');
   
@@ -15,9 +15,12 @@ function criarResumo () {
     pegarSection.appendChild(criarTituloResumo);
     for (let i = 0; i < pegarTodasDiv.length; i += 1) {
         const criarDivResumo = document.createElement('div');
-        criarDivResumo.classList.add('resumo-final-div');
-        criarDivResumo.innerText = pegarTodasDiv[i].lastElementChild.value;
-        pegarSection.appendChild(criarDivResumo);
+        if (pegarTodasDiv[i].type === 'radio' && !pegarTodasDiv[i].checked) {
+          continue;
+        }
+          criarDivResumo.classList.add('resumo-final-div');
+          criarDivResumo.innerText = pegarTodasDiv[i].value;
+          pegarSection.appendChild(criarDivResumo);
     }
     submitDefault();
   })

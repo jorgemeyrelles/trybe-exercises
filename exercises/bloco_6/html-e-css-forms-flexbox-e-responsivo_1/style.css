@@ -19,6 +19,17 @@
 
 .bloco-1-div {}
 
+.bloco-2-div {}
+
+.resumo-final-div {
+  margin: 10px;
+}
+
+#radio {
+  display: flex;
+  width: 50%;
+}
+
 label {
   display: flex;
   align-items: center;
@@ -29,6 +40,7 @@ label {
 label.radio-opcao {
   width: 100px;
   justify-content: flex-end;
+  margin-right: 10px;
 }
 
 input[type=text] {
@@ -37,6 +49,10 @@ input[type=text] {
 
 input[type=email] {
   width: 300px;
+}
+
+input[type=radio] {
+  margin-right: 5px;
 }
 
 header h1 {
