@@ -5,14 +5,23 @@ function submitDefault() {
   });
 }
 function criarResumo () {
-  const buttonSubmiteResumo = document.getElementById('finalizar');
-  buttonSubmiteResumo.addEventListener('click', () => {
-    const getClassBloco1 = document.querySelector('.bloco-1');
-    const getDivResumo = document.querySelector('#nome-texto');
-    const txt = getClassBloco1.innerHTML;
-    console.log(txt);
-    getDivResumo.appendChild(txt);
+  const pegarTodasDiv = document.querySelectorAll('div');
+  const pegarSection = document.querySelector('section.bloco-3');
+  const pegarButtonSubmit = document.querySelector('#finalizar');
+  
+  pegarButtonSubmit.addEventListener('click', () => {
+    const criarTituloResumo = document.createElement('h1');
+    criarTituloResumo.innerHTML = 'Resumo do Currículo';
+    pegarSection.appendChild(criarTituloResumo);
+    for (let i = 0; i < pegarTodasDiv.length; i += 1) {
+        const criarDivResumo = document.createElement('div');
+        criarDivResumo.classList.add('resumo-final-div');
+        criarDivResumo.innerText = pegarTodasDiv[i].lastElementChild.value;
+        pegarSection.appendChild(criarDivResumo);
+    }
+    submitDefault();
   })
+  
 }
 criarResumo();
 
@@ -41,5 +50,3 @@ function verificaData(data) {
     }
   }
 }
-
-function 
