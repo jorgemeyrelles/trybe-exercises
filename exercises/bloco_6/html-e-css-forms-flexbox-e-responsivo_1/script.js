@@ -1,3 +1,28 @@
+function confereEmail() {
+  const pegarEmail = document.querySelector('#e-mail');
+  const valorEmail = pegarEmail.value;
+  const confere = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+$/.test(valorEmail);
+  if (!confere && valorEmail.length) {
+    pegarEmail.value = '';
+    alert('E-mail inválido');
+    return false;
+  }
+  return valorEmail;
+}
+
+function verificaData(data) {
+  if (data.indexOf('/') === 2 || data.indexOf('/')) {
+    const dia = data.substr(0,2);
+    const mes = data.substr(3,2);
+    const ano = data.substr(6,4);
+    if (dia >= 0 && dia <=31 && mes >= 1 && mes <= 12 && ano < 0 && ano.length === 4) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
 function submitDefault() {
   const buttonSubmite = document.getElementById('finalizar');
   buttonSubmite.addEventListener('click', (e) => {
@@ -5,9 +30,12 @@ function submitDefault() {
   });
 }
 function criarResumo () {
-  const pegarTodasDiv = document.querySelectorAll('input');
+  submitDefault();
+  const pegarTodasDiv = document.querySelectorAll('.input');
   const pegarSection = document.querySelector('section.bloco-3');
   const pegarButtonSubmit = document.querySelector('#finalizar');
+  const pegarTextarea = document.querySelector('textarea');
+  // const pegarTodosInput = document.querySelectorAll('input');
   
   pegarButtonSubmit.addEventListener('click', () => {
     const criarTituloResumo = document.createElement('h1');
@@ -18,11 +46,12 @@ function criarResumo () {
         if (pegarTodasDiv[i].type === 'radio' && !pegarTodasDiv[i].checked) {
           continue;
         }
+        if (confereEmail !== false && verificaData !== false) {
           criarDivResumo.classList.add('resumo-final-div');
           criarDivResumo.innerText = pegarTodasDiv[i].value;
           pegarSection.appendChild(criarDivResumo);
+        }
     }
-    submitDefault();
   })
   
 }
@@ -41,15 +70,15 @@ function criarOpcaoEstados() {
 }
 criarOpcaoEstados();
 
-function verificaData(data) {
-  if (data.indexOf('/') === 2 || data.indexOf('/')) {
-    const dia = data.substr(0,2);
-    const mes = data.substr(3,2);
-    const ano = data.substr(6,4);
-    if (dia >= 0 && dia <=31 && mes >= 1 && mes <= 12 && ano < 0 && ano.length === 4) {
-      return true;
-    } else {
-      return false;
+function buttonLimpar() {
+  const pegarButtonLimpar = document.querySelector('#limpar');
+  const pegarInput = document.querySelectorAll('.input');
+  const pegarResumo = document.querySelectorAll('.resumo-final-div');
+  pegarButtonLimpar.addEventListener('click', () => {
+    for (let i = 0; i < pegarInput.length; i += 1) {
+      const valorInput = pegarInput[i].value;
+      valorInput.value = '';
+      console.log(pegarResumo[i].value);
     }
-  }
+  });
 }
