@@ -8,66 +8,67 @@
   <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
 </head>
 <body>
-  <header class="section">
+  <header class="section" style="background-color: hsl(171, 100%, 29%); position: fixed;width: 100%; z-index: 1; padding-left: 30px;">
     <h1 class="title">Formulário</h1>
   </header>
-  <form action="" method="GET">
-    <fieldset class="hero is-info">
-      <div class="bloco-1-div">
-        <label for="nome" class="bloco-1-label">Nome</label><input type="text" max="40" name="nome" id="nome" class="input-classe" required>
+  <form action="" method="GET" style="background-color: hsl(0, 0%, 86%); position: relative; top: 130px; padding: 20px 0 0 20px;">
+    <fieldset class="hero is-info" style="width: 50%; margin-left: auto; margin-right: auto; border-radius: 10px;">
+      <div class="control" style="margin: 15px;" style="margin: 15px;">
+        <label for="nome" class="subtitle">Nome</label><input type="text" max="40" name="nome" id="nome" class="input-classe input" required>
       </div>
       <br>
-      <div class="bloco-1-div">
-        <label for="e-mail" class="bloco-1-label">E-mail</label><input type="email" max="50" name="email" placeholder="nome@algumacoisa.com" id="e-mail"  class="input-classe"required>        
+      <div class="control" style="margin: 15px;">
+        <label for="e-mail" class="subtitle">E-mail</label><input type="email" max="50" name="email" placeholder="nome@algumacoisa.com" id="e-mail"  class="input-classe input"required>        
       </div>
       <br>
-      <div class="bloco-1-div">
-        <label for="cpf" class="bloco-1-label">CPF</label><input type="text" max='11' id='cpf' class="input-classe" required>
+      <div class="control" style="margin: 15px;">
+        <label for="cpf" class="subtitle">CPF</label><input type="text" max='11' id='cpf' class="input-classe input" required>
       </div>
       <br>
-      <div class="bloco-1-div">
-        <label for="endereco" class="bloco-1-label">Endereço</label><input type="text" max="200" id="endereco" class="input-classe" required>
+      <div class="control" style="margin: 15px;">
+        <label for="endereco" class="subtitle">Endereço</label><input type="text" max="200" id="endereco" class="input-classe input" required>
       </div>
       <br>
-      <div class="bloco-1-div">
-        <label for="cidade" class="bloco-1-label">Cidade</label><input type="text" max="28" id="cidade" class="input-classe" required>
+      <div class="control" style="margin: 15px;">
+        <label for="cidade" class="subtitle">Cidade</label><input type="text" max="28" id="cidade" class="input-classe input" required>
       </div>
       <br>
-      <div class="bloco-1-div">
-        <label for="estado" class="bloco-1-label">Estado</label>
-        <select name='estado' id="estado" required>
+      <div class="control" style="margin: 15px;">
+        <label for="estado" class="subtitle">Estado</label>
+        <select name='estado' id="estado" class="option" required>
         </select>
       </div>
       </br>
-      <div class="bloco-1-div" class="control">
-        <label for="moradia" class="bloco-1-label" style="margin-right: 30px;">Tipo de Moradia</label>
-        <label for="casa" class="radio" style="width: 120px;"><input type="radio" name="moradia" id="casa" value="Casa" class="input-classe">Casa</label>
-        <label for="apt" class="radio" style="width: 120px;"><input type="radio" name="moradia" id="apt" value="Apartamento" class="input-classe">Apartamento</label>
-      </div>
-    </fieldset>
-    <fieldset class="hero is-info">
-      <div class="bloco-2-div">
-        <label for="resumo" class="bloco-2-label">Resumo do Currículo</label>
-        <br>
-        <textarea name="resumo" placeholder="Adicione o resumo do seu currículo" maxlength="1000" required id="resumo" cols="48" rows="10" class="input-classe"></textarea>
-      </div>
-      <br>
-      <div class="bloco-2-div">
-        <label for="cargo-texto" class="bloco-2-label">Cargo</label><input type="text" required max="40" name="cargo-texto" id="cargo-texto" class="input-classe">
-      </div>
-      <br>
-      <div class="bloco-2-div">
-        <label for="cargo" class="bloco-2-label">Descrição</label><input type="text" required max="500" name="cargo" id="cargo" class="input-classe">
-      </div>
-      <br>
-      <div class="bloco-2-div">
-        <label for="data-ini" class="bloco-2-label">Data de início</label><input type="date" required name="data_ini" id="data-inicio" class="input-classe">
+      <div class="control" style="margin: 15px;" class="control" style="margin: 15px;">
+        <label for="moradia" class="subtitle" style="margin-right: 30px;">Tipo de Moradia</label>
+        <label for="casa" class="radio" style="width: 120px;"><input type="radio" name="moradia" id="casa" value="Casa" class="input-classe radio">Casa</label>
+        <label for="apt" class="radio" style="width: 120px;"><input type="radio" name="moradia" id="apt" value="Apartamento" class="input-classe radio">Apartamento</label>
       </div>
     </fieldset>
     <br>
-    <section class="btn section">
+    <fieldset class="hero is-info" style="width: 50%; margin-left: auto; margin-right: auto; border-radius: 10px;">
+      <div class="control" style="margin: 15px;">
+        <label for="resumo" class="subtitle">Resumo do Currículo</label>
+        <br>
+        <textarea name="resumo" placeholder="Adicione o resumo do seu currículo" maxlength="1000" required id="resumo" cols="48" rows="10" class="input-classe input"></textarea>
+      </div>
+      <br>
+      <div class="control" style="margin: 15px;">
+        <label for="cargo-texto" class="subtitle">Cargo</label><input type="text" required max="40" name="cargo-texto" id="cargo-texto" class="input-classe input">
+      </div>
+      <br>
+      <div class="control" style="margin: 15px;">
+        <label for="cargo" class="subtitle">Descrição</label><input type="text" required max="500" name="cargo" id="cargo" class="input-classe input">
+      </div>
+      <br>
+      <div class="control" style="margin: 15px;">
+        <label for="data-ini" class="subtitle">Data de início</label><input type="date" required name="data_ini" id="data-inicio" class="input-classe input">
+      </div>
+    </fieldset>
+    <br>
+    <section class="btn section" style="margin-left: auto; margin-right: auto; width: 300px; display: flex; justify-content: space-around;">
       <button type="button" id="finalizar" class="button is-success">Enviar</button>
-      <button type='button' id="limpar" class="button is-warning is-outlined">Limpar</button>
+      <button type='button' id="limpar" class="button is-link is-light">Limpar</button>
     </section>
     <section class="bloco-3">
     </section>

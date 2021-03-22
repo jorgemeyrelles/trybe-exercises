@@ -31,7 +31,7 @@ function submitDefault() {
 }
 function criarResumo () {
   submitDefault();
-  const pegarTodasDiv = document.querySelectorAll('.input-classe');
+  const pegarTodasDiv = document.querySelectorAll('.input-classe input');
   const pegarSection = document.querySelector('section.bloco-3');
   const pegarButtonSubmit = document.querySelector('#finalizar');
   const pegarTextarea = document.querySelector('textarea');
