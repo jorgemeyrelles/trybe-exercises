@@ -31,7 +31,7 @@ function submitDefault() {
 }
 function criarResumo () {
   submitDefault();
-  const pegarTodasDiv = document.querySelectorAll('.input');
+  const pegarTodasDiv = document.querySelectorAll('.input-classe');
   const pegarSection = document.querySelector('section.bloco-3');
   const pegarButtonSubmit = document.querySelector('#finalizar');
   const pegarTextarea = document.querySelector('textarea');
@@ -40,6 +40,7 @@ function criarResumo () {
   pegarButtonSubmit.addEventListener('click', () => {
     const criarTituloResumo = document.createElement('h1');
     criarTituloResumo.innerHTML = 'Resumo do Currículo';
+    criarTituloResumo.className = 'title';
     pegarSection.appendChild(criarTituloResumo);
     for (let i = 0; i < pegarTodasDiv.length; i += 1) {
         const criarDivResumo = document.createElement('div');
