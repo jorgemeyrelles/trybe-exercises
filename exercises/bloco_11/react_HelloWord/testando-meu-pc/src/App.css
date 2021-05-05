@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.helloWorld {
+  background-color: grey;
+  color: black;
+  text-align: center;
+  font-size: 50px;
+  border-bottom: 2px solid black;
+  width: 100%;
+  padding-bottom: 4px;
+}

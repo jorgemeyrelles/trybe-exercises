@@ -1,11 +1,13 @@
+import React from 'react';
 import './App.css';
+import HelloWorld from './helloworld';
 
-function App() {
-  return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
-  );
+const element1 = 'Hello World!';
+function App(element) {
+  element = element1;
+  return <HelloWorld />
 }
+
+window.onload = App;
 
 export default App;
