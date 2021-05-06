@@ -38,11 +38,45 @@
 }
 
 .helloWorld {
-  background-color: grey;
+  background-color: rgb(59, 95, 212);
   color: black;
   text-align: center;
   font-size: 50px;
   border-bottom: 2px solid black;
   width: 100%;
   padding-bottom: 4px;
+}
+
+.imgm {
+  width: 300px;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.sec {
+  display: inline-flex;
+  align-items: center;
+  align-content: space-between;
+}
+
+.secImg {
+  display: flex;
+  margin-left: 100px;
+}
+
+.secText {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  text-align: justify;
+}
+
+.hardSkills {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-left: 50px;
+  width: 400px;
 }
