@@ -1,0 +1,46 @@
+import React, { Component } from "react";
+
+class HardSkills extends Component {
+  render() {
+    const list = ['Git', 'GitHub', 'Unix', 'HTML', 'CSS', 'Javascript', 'React Native'];
+    const hs = list.map((element, index) => {
+      return <li key={ index }>{ element }</li>
+    })
+    return (
+      <section>
+        <h3>Hard-Skills adquiridos</h3>
+        <ul>
+          {hs}
+        </ul>
+      </section>
+    )
+  }
+}
+
+export default HardSkills;
+
+import React, { Component} from "react";
+
+class HelloWorld extends Component {
+  render () {
+    return (
+      <h1 class='helloWorld'>Sobre {this.props.firstName} {this.props.lastName}!!</h1>
+    )
+  }
+}
+
+export default HelloWorld;
+
+import React, { Component } from 'react';
+
+class Imagem extends Component {
+  render() {
+    return (
+      <div className='secImg'>
+        <img className='imgm' src={this.props.source} alt={this.props.alt} />;
+      </div>
+    )
+  }
+}
+
+export default Imagem;
